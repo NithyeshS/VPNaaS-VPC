@@ -1,0 +1,7 @@
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+  - name: Creating container "{{ containerName }}" using "{{ imageName }}"
+    command: sudo docker run -itd --privileged --name="{{ containerName }}" "{{ imageName }}"
+

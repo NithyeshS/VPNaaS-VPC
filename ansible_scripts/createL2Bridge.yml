@@ -1,0 +1,9 @@
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+    - name: Creating bridge "{{ bridgeName }}"
+      command: sudo brctl addbr "{{ bridgeName }}"
+    - name: Bringing the bridge device up
+      command: sudo ip link set "{{ bridgeName }}" up
+

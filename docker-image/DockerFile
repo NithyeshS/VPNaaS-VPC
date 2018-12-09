@@ -1,0 +1,16 @@
+FROM ubuntu
+
+RUN apt-get update
+RUN apt-get -y --force-yes install iproute2
+RUN apt-get -y --force-yes install iptables
+RUN apt-get -y --force-yes install iputils-ping
+RUN apt-get -y --force-yes install traceroute
+RUN apt-get -y --force-yes install tcpdump
+RUN apt-get -y --force-yes install iperf
+RUN apt-get -y --force-yes install nano
+RUN apt-get -y --force-yes install isc-dhcp-client
+RUN apt-get -y --force-yes install dnsmasq
+RUN apt-get -y --force-yes install keepalived
+
+RUN mv /usr/sbin/tcpdump /usr/bin/tcpdump
+RUN ln -s /usr/bin/tcpdump /usr/sbin/tcpdump

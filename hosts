@@ -1,0 +1,3 @@
+[local]
+hypervisor ansible_connection=local
+

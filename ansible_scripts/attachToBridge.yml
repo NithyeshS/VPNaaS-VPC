@@ -1,0 +1,7 @@
+- hosts: localhost
+  gather_facts: no
+
+  tasks:
+  - name: Attaching interface "{{ vethName }}" to bridge "{{ bridgeName }}"
+    command: sudo brctl addif "{{ bridgeName }}" "{{ vethName }}"
+

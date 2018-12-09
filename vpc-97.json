@@ -1,0 +1,33 @@
+{
+    "Resources" : {
+        "VPC" : {
+            "Properties" : {
+                "Name" : "FrontendServersVPC",
+                "VpcID" : "97",
+                "TenantID" : "t-50"
+            }
+        },
+
+        "Instances" : [
+            {
+                "Count" : "1",
+                "NetworkID" : "S79"
+            },
+            {
+                "Count" : "1",
+                "NetworkID" : "S78"
+            }
+        ],
+
+        "Subnets" : [
+            {
+                "Name" : "S79",
+                "CIDRBlock" : "192.168.79.0/24"
+            },
+            {
+                "Name" : "S78",
+                "CIDRBlock" : "192.168.78.0/24"
+            }
+        ]
+    }
+}
